@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стилист по волосам</title>
+  <style>
+    /* Общее оформление */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Заголовок */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    header .tagline {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeIn 2s ease-out 1s;
+    }
+
+    /* Анимация fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Блок Hero */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x600/000000/FFFFFF?text=Стилист');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 200px 20px;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      margin: 0;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-out 1s;
+    }
+
+    .button {
+      padding: 15px 30px;
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Секции */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h2, .portfolio h2, .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .services, .portfolio {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .service-item, .portfolio-item {
+      background-color: #fff;
+      border: 2px solid #000;
+      width: 250px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover, .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-item img, .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .service-item h3, .portfolio-item h3 {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #000;
+    }
+
+    /* Форма контактов */
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #000;
+      border-radius: 5px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #e67e22;
+      outline: none;
+    }
+
+    .contact-form button {
+      padding: 15px 30px;
+      background-color: #e67e22;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #d35400;
+    }
+
+    /* Футер */
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #e67e22;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Мобильные стили */
+    @media (max-width: 768px) {
+      .services, .portfolio {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-item, .portfolio-item {
+        width: 80%;
+        margin: 10px 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Стилист по волосам</h1>
+    <p class="tagline">Преображаем ваши волосы с любовью и профессионализмом</p>
+  </header>
+
+  <section class="hero">
+    <h2>Запишитесь на стильную прическу!</h2>
+    <p>Позвольте нам заботиться о ваших волосах.</p>
+    <a href="#contact" class="button">Записаться</a>
+  </section>
+
+  <section class="services">
+    <h2>Наши Услуги</h2>
+    <div class="service-item">
+      <img src="https://via.placeholder.com/300" alt="Услуга 1">
+      <h3>Короткие стрижки</h3>
+      <p>Модные стрижки, которые подчеркивают вашу индивидуальность.</p>
+    </div>
+    <div class="service-item">
+      <img src="https://via.placeholder.com/300" alt="Услуга 2">
+      <h3>Окрашивание волос</h3>
+      <p>Профессиональное окрашивание для любого типа волос.</p>
+    </div>
+    <div class="service-item">
+      <img src="https://via.placeholder.com/300" alt="Услуга 3">
+      <h3>Укладка</h3>
+      <p>Укладка для любого случая – от повседневной до торжественной.</p>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <h2>Мое Портфолио</h2>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300x200" alt="Работа 1">
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300x200" alt="Работа 2">
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/300x200" alt="Работа 3">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Запишитесь на услугу через форму ниже или свяжитесь с нами по телефону!</p>
+    <div class="contact-form">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Ваш email" required>
+      <textarea placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Стилист по волосам. Все права защищены.</p>
+    <p>Сайт разработан <a href="#">Мысли в коде</a></p>
+  </footer>
+
+</body>
+</html>
